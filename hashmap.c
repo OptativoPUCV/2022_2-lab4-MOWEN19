@@ -47,6 +47,7 @@ HashMap * createMap(long capacity) {
   //1.- Implemente la función *createMap* en el archivo hashmap.c. Esta función crea una variable     de tipo HashMap, inicializa el arreglo de buckets con casillas nulas, inicializa el resto de       variables y retorna el mapa. Inicialice el índice current a -1.
     HashMap *map = (HashMap *)calloc(1,sizeof(HashMap));
     map->buckets = (Pair **)calloc(capacity,sizeof(Pair));
+    map->capacity = capacity;
     map->size = 0;
     map->current = -1;
   
