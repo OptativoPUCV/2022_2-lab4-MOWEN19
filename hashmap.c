@@ -133,14 +133,16 @@ void eraseMap(HashMap * map,  char * key) {
 //**No elimine el par**, sólo invalídelo asignando NULL a la clave (pair->key=NULL).
 //Recuerde actualizar la variable size.
   size_t i = hash(key,map->capacity);
+  size_t cont= 0;
   while(1){
     if(is_equal(map->buckets[i]->key,key) == 0){
       map->buckets[i]->key = NULL;
       map->size-=1;
       return;
     }
-     
     i++;
+    cont ++;
+    if(cont == map->capacity){return NULL;}
     if(i == map->capacity){
       i = 0;
     }
