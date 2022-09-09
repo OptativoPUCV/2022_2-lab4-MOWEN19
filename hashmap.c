@@ -77,6 +77,11 @@ void insertMap(HashMap * map, char * key, void * value) {
       map->size += 1;
       map->current = i;
     }
+    if(map->buckets[i]->key == NULL){
+      map->buckets[i] = newPair;
+      map->size += 1;
+      map->current = i;
+    }  
     i++;
     if (i == map->capacity){
       i = 0;
