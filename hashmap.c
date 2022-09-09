@@ -134,7 +134,7 @@ void eraseMap(HashMap * map,  char * key) {
 //Recuerde actualizar la variable size.
   size_t i = hash(key,map->capacity);
   while(1){
-    if(map->buckets[i]->key == key){
+    if(is_equal(map->buckets[i]->key,key) == 0){
       map->buckets[i]->key = NULL;
     }
      
