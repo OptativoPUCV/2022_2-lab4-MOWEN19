@@ -105,21 +105,7 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 //Recuerde actualizar el índice current a la posición encontrada.
 //Recuerde que el arreglo es **circular**.
-  size_t i = hash(key,map->capacity);
-  size_t cont= 0;
-  while(1){
-    if (map->buckets[i]->key == NULL){return NULL;}
-    if(is_equal(map->buckets[i]->key,key)){
-      return map->buckets[i];
-    }  
-    i++;  
-    cont ++;
-    if(cont == map->capacity){return NULL;}
-    if(i == map->capacity){
-      i = 0;
-    }
-    
-  }
+  
   
     return NULL;
 }
