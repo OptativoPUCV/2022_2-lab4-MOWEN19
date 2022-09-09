@@ -68,11 +68,75 @@ void insertMap(HashMap * map, char * key, void * value) {
 //Recuerde que el arreglo es **circular**.
 //Recuerde actualizar la variable size.
 
-
-
+  while(1){
+     if(map->buckets[i]==NULL){   
+      Pair *newPair = createPair(key,value);
+      size_t i = hash(key,map->capacity);//size_t == long long
+      map->buckets[i] = newPair;
+      map->size += 1;
+      map->current = i;
+       }
+    i++;
+    if (i == map->capacity){
+      i = 0;
+    }
+}
+  
+  
   
 return;
 }
+
+Pair * searchMap(HashMap * map,  char * key) {   
+  //3.- Implemente la función Pair * searchMap(HashMap * map,  char * key), la cual retorna el **Pair** asociado a la clave ingresada. 
+//Recuerde que para buscar el par debe:
+
+//a - Usar la función hash para obtener la posición donde puede encontrarse el par con la clave
+
+//b - Si la clave no se encuentra avance hasta encontrarla (*método de resolución de colisiones*)
+
+//c - Si llega a una casilla nula, retorne NULL inmediatamente (no siga avanzando, la clave no está)
+
+//Recuerde actualizar el índice current a la posición encontrada.
+//Recuerde que el arreglo es **circular**.
+  size_t i = hash(key,capacity);
+  size_t cont= 0;
+  while(1){
+    if (map->buckets[i]->key == NULL){return NULL;}
+    if(is_equal(map->buckets[i]->key,key)){
+      return map->buckets[i];
+    }  
+    i++;  
+    cont ++;
+    if(cont == map->capacity){return NULL;}
+    if(i == map->capacity){
+      i = 0;
+    }
+    
+  }
+  
+    return NULL;
+}
+
+void eraseMap(HashMap * map,  char * key) {    
+//4.- Implemente la función void eraseMap(HashMap * map,  char * key). Está función elimina el dato correspondiente a la clave key. Para hacerlo debe buscar el dato y luego *marcarlo* para que no sea válido.
+//**No elimine el par**, sólo invalídelo asignando NULL a la clave (pair->key=NULL).
+//Recuerde actualizar la variable size.
+
+  return;
+}
+
+Pair * firstMap(HashMap * map) {
+//Pair * firstMap(HashMap * map) retorna el primer **Pair** válido del arreglo buckets. Recuerde actualizar el índice.
+    return NULL;
+}
+
+
+Pair * nextMap(HashMap * map) {
+//Pair * nextMap(HashMap * map) retorna el siguiente **Pair** del arreglo buckets a partir índice current. Recuerde actualizar el índice.
+    return NULL;
+}
+
 
 void enlarge(HashMap * map) {
     enlarge_called = 1; //no borrar (testing purposes)
@@ -89,42 +153,4 @@ void enlarge(HashMap * map) {
 
 //e - Inserte los elementos del arreglo *old_buckets* en el mapa (use la función insertMap que ya implementó).
 return;
-}
-
-
-
-
-void eraseMap(HashMap * map,  char * key) {    
-//4.- Implemente la función void eraseMap(HashMap * map,  char * key). Está función elimina el dato correspondiente a la clave key. Para hacerlo debe buscar el dato y luego *marcarlo* para que no sea válido.
-//**No elimine el par**, sólo invalídelo asignando NULL a la clave (pair->key=NULL).
-//Recuerde actualizar la variable size.
-
-  return;
-}
-
-Pair * searchMap(HashMap * map,  char * key) {   
-  //3.- Implemente la función Pair * searchMap(HashMap * map,  char * key), la cual retorna el **Pair** asociado a la clave ingresada. 
-//Recuerde que para buscar el par debe:
-
-//a - Usar la función hash para obtener la posición donde puede encontrarse el par con la clave
-
-//b - Si la clave no se encuentra avance hasta encontrarla (*método de resolución de colisiones*)
-
-//c - Si llega a una casilla nula, retorne NULL inmediatamente (no siga avanzando, la clave no está)
-
-//Recuerde actualizar el índice current a la posición encontrada.
-//Recuerde que el arreglo es **circular**.
-
-
-    return NULL;
-}
-
-Pair * firstMap(HashMap * map) {
-//Pair * firstMap(HashMap * map) retorna el primer **Pair** válido del arreglo buckets. Recuerde actualizar el índice.
-    return NULL;
-}
-
-Pair * nextMap(HashMap * map) {
-//Pair * nextMap(HashMap * map) retorna el siguiente **Pair** del arreglo buckets a partir índice current. Recuerde actualizar el índice.
-    return NULL;
 }

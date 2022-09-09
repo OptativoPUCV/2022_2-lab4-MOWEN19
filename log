@@ -14,3 +14,18 @@ Fri 09 Sep 2022 01:00:12 PM UTC:
  tests:  1|5
 total_score: 10/70
 72dcc27
+Fri 09 Sep 2022 01:29:13 PM UTC: 
+ hashmap.c | 77 ++++++++++++++++++++++++++++++++++++++++++---------------------
+ 1 file changed, 51 insertions(+), 26 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:72:22: error: ‘i’ undeclared (first use in this function)
+   72 |      if(map->buckets[i]==NULL){
+      |                      ^
+hashmap.c:72:22: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c: In function ‘searchMap’:
+hashmap.c:102:23: error: ‘capacity’ undeclared (first use in this function)
+  102 |   size_t i = hash(key,capacity);
+      |                       ^~~~~~~~
+Compilation failed
+4bd9d4a
