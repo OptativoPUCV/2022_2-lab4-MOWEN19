@@ -72,8 +72,8 @@ void insertMap(HashMap * map, char * key, void * value) {
     Pair *newPair = createPair(key,value);
     size_t i = hash(key,map->capacity);//size_t == long long
     if(map->buckets[i]==NULL){   
-      puts("lolol");
-      map->buckets[i] = newPair;
+      map->buckets[i]->key = newPair->key;
+      map->buckets[i]->value = newPair->value;
       map->size += 1;
       map->current = i;
     }
