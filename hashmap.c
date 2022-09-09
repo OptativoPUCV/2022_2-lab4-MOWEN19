@@ -135,10 +135,10 @@ void eraseMap(HashMap * map,  char * key) {
   size_t i = hash(key,map->capacity);
   size_t cont= 0;
   while(1){
+    if (map->buckets[i] == NULL){return NULL;}
     if(is_equal(map->buckets[i]->key,key) == 0){
       map->buckets[i]->key = NULL;
       map->size-=1;
-      puts("alv");
       return;
     }
     i++;
