@@ -87,6 +87,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       return;
     }  
     if (is_equal(map->buckets[i]->key,key)==0){
+      free(newPair);
       return;
     }
     
