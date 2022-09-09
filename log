@@ -376,3 +376,17 @@ hashmap.c:154:8: note: declared here
 cc1: all warnings being treated as errors
 Compilation failed
 7c191fb
+Fri 09 Sep 2022 10:38:01 PM UTC: 
+ hashmap.c | 2 --
+ 1 file changed, 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:164:7: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+  164 |       return;
+      |       ^~~~~~
+hashmap.c:154:8: note: declared here
+  154 | Pair * firstMap(HashMap * map) {
+      |        ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2bdbd23
