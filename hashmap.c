@@ -71,8 +71,6 @@ void insertMap(HashMap * map, char * key, void * value) {
   size_t i = hash(key,map->capacity);//size_t == long long
   while(1){
     
-    
-    
     if(map->buckets[i]==NULL){   
       map->buckets[i] = newPair;
       map->size += 1;
@@ -86,7 +84,9 @@ void insertMap(HashMap * map, char * key, void * value) {
       map->current = i;
       return;
     }  
-    
+    if (is_equal(map->buckets[i]->key,newPair->key)){
+      return;
+    }
     
     i++;
     if (i == map->capacity){
