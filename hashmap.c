@@ -155,7 +155,7 @@ Pair * firstMap(HashMap * map) {
 //Pair * firstMap(HashMap * map) retorna el primer **Pair** válido del arreglo buckets. Recuerde actualizar el índice.
   size_t i = 0;
   while(1){
-    if(map->buckets[i] != NULL){
+    if(map->buckets[i]->key != NULL){
       map->current = i; 
       return map->buckets[i];
     }
