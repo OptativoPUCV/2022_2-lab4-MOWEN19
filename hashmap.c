@@ -161,7 +161,7 @@ Pair * firstMap(HashMap * map) {
     }
     i++;
     if(i == map->capacity){
-      return;
+      return NULL;
     }
   }
   
