@@ -292,3 +292,14 @@ Fri 09 Sep 2022 10:22:49 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 d588806
+Fri 09 Sep 2022 10:25:47 PM UTC: 
+ hashmap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘eraseMap’:
+hashmap.c:139:7: error: ‘size’ undeclared (first use in this function)
+  139 |       size-=1;
+      |       ^~~~
+hashmap.c:139:7: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+968759a
