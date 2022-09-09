@@ -29,3 +29,14 @@ hashmap.c:102:23: error: ‘capacity’ undeclared (first use in this function)
       |                       ^~~~~~~~
 Compilation failed
 4bd9d4a
+Fri 09 Sep 2022 01:29:38 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘insertMap’:
+hashmap.c:72:22: error: ‘i’ undeclared (first use in this function)
+   72 |      if(map->buckets[i]==NULL){
+      |                      ^
+hashmap.c:72:22: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d489c44
