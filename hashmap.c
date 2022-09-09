@@ -85,6 +85,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       return;
     }  
     if (is_equal(map->buckets[i]->key,newPair->key)){
+      
       return;
     }
     
@@ -121,11 +122,9 @@ Pair * searchMap(HashMap * map,  char * key) {
     if(cont == map->capacity){return NULL;}
     if(i == map->capacity){
       i = 0;
-    }
-    
+    } 
   }
   
-    return NULL;
 }
 
 void eraseMap(HashMap * map,  char * key) {    
