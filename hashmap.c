@@ -71,15 +71,18 @@ void insertMap(HashMap * map, char * key, void * value) {
   while(1){
     Pair *newPair = createPair(key,value);
     size_t i = hash(key,map->capacity);//size_t == long long
-    if (map->buckets[i]->key == key){
+    if (is_equal(map->buckets[i]->key,key)){
       puts("holaf0");
       return;
+    }
+    
     if(map->buckets[i]==NULL){   
       map->buckets[i] = newPair;
       map->size += 1;
       map->current = i;
       return;
     }
+    
     if(map->buckets[i]->key == NULL){
       map->buckets[i] = newPair;
       map->size += 1;
@@ -87,7 +90,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       return;
     }  
     
-    }
+    
     i++;
     if (i == map->capacity){
       i = 0;
