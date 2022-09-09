@@ -68,7 +68,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 //Recuerde que el arreglo es **circular**.
 //Recuerde actualizar la variable size.
 
-  while(true){
+  while(1){
     Pair *newPair = createPair(key,value);
     size_t i = hash(key,map->capacity);//size_t == long long
     if(map->buckets[i]==NULL){   
