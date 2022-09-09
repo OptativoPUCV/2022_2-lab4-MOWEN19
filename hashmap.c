@@ -68,24 +68,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 //Recuerde que el arreglo es **circular**.
 //Recuerde actualizar la variable size.
 
-  while(1){
-    Pair *newPair = createPair(key,value);
-    size_t i = hash(key,map->capacity);//size_t == long long
-    if(map->buckets[i]==NULL){   
-      
-      map->buckets[i] = newPair;
-      map->size += 1;
-      map->current = i;
-    }
-    if(map->buckets[i]->key == NULL){
-      map->buckets[i] = newPair;
-      map->size += 1;
-      map->current = i;
-    }  
-    i++;
-    if (i == map->capacity){
-      i = 0;
-    }
+  
 }
   
   
@@ -105,7 +88,21 @@ Pair * searchMap(HashMap * map,  char * key) {
 
 //Recuerde actualizar el índice current a la posición encontrada.
 //Recuerde que el arreglo es **circular**.
-  
+  size_t i = hash(key,map->capacity);
+  size_t cont= 0;
+  while(1){
+    if (map->buckets[i]->key == NULL){return NULL;}
+    if(is_equal(map->buckets[i]->key,key)){
+      return map->buckets[i];
+    }  
+    i++;  
+    cont ++;
+    if(cont == map->capacity){return NULL;}
+    if(i == map->capacity){
+      i = 0;
+    }
+    
+  }
   
     return NULL;
 }
