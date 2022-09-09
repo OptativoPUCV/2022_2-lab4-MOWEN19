@@ -84,6 +84,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       return;
     }  
     if (map->buckets[i]->key == key){
+      puts("holaf0");
       return;
     }
     i++;
