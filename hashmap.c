@@ -83,6 +83,9 @@ void insertMap(HashMap * map, char * key, void * value) {
       map->current = i;
       return;
     }  
+    if (map->buckets[i]->key == key){
+      return;
+    }
     i++;
     if (i == map->capacity){
       i = 0;
