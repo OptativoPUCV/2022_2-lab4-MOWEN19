@@ -69,7 +69,7 @@ void insertMap(HashMap * map, char * key, void * value) {
 //Recuerde actualizar la variable size.
 
   
-}
+
   
   
   
