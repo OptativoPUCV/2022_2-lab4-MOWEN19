@@ -164,8 +164,6 @@ Pair * firstMap(HashMap * map) {
       return NULL;
     }
   }
-  
-    return NULL;
 }
 
 
