@@ -68,10 +68,8 @@ void insertMap(HashMap * map, char * key, void * value) {
 //Recuerde que el arreglo es **circular**.
 //Recuerde actualizar la variable size.
 
-  while(1){
   
-  
-  
+   
 return;
 }
 
