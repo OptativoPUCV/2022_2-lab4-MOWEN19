@@ -352,3 +352,27 @@ Fri 09 Sep 2022 10:32:55 PM UTC:
  tests:  8|3
 total_score: 40/70
 e09e71b
+Fri 09 Sep 2022 10:37:47 PM UTC: 
+ hashmap.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘firstMap’:
+hashmap.c:163:5: error: ‘cont’ undeclared (first use in this function)
+  163 |     cont ++;
+      |     ^~~~
+hashmap.c:163:5: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:164:31: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+  164 |     if(cont == map->capacity){return;}
+      |                               ^~~~~~
+hashmap.c:154:8: note: declared here
+  154 | Pair * firstMap(HashMap * map) {
+      |        ^~~~~~~~
+hashmap.c:166:7: error: ‘return’ with no value, in function returning non-void [-Werror=return-type]
+  166 |       return;
+      |       ^~~~~~
+hashmap.c:154:8: note: declared here
+  154 | Pair * firstMap(HashMap * map) {
+      |        ^~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7c191fb
