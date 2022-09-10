@@ -161,7 +161,7 @@ Pair * firstMap(HashMap * map) {
       return map->buckets[i];
     }
     i++;
-    if (cont == 1){return;}
+    if (cont == 1){return NULL;}
     if(i == map->capacity){
       cont++;
       i = 0;
