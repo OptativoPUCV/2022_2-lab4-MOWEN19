@@ -769,3 +769,18 @@ Sat 10 Sep 2022 11:15:50 PM UTC:
  tests:  13|2
 total_score: 50/70
 5bc4b1b
+Sat 10 Sep 2022 11:16:16 PM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:152:18: error: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘size_t’ {aka ‘long unsigned int’} [-Werror=format=]
+  152 |         printf("%d",i);
+      |                 ~^  ~
+      |                  |  |
+      |                  |  size_t {aka long unsigned int}
+      |                  int
+      |                 %ld
+cc1: all warnings being treated as errors
+Compilation failed
+b274633

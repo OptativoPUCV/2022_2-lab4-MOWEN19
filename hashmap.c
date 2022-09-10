@@ -149,6 +149,7 @@ Pair * nextMap(HashMap * map) {
     if (map->buckets[i]!=NULL){
       if (map->buckets[i]->key != NULL){
         map->current = i;
+        printf("%d",i);
         return map->buckets[i];
       }
     } 
