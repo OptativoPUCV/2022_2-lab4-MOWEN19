@@ -427,3 +427,14 @@ hashmap.c:200:11: error: unused variable ‘oldMap’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 3219f06
+Sat 10 Sep 2022 05:29:40 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:200:11: error: unused variable ‘olcBuckets’ [-Werror=unused-variable]
+  200 |   Pair ** olcBuckets = map->buckets;
+      |           ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+13a3698
