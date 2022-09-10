@@ -638,3 +638,15 @@ Sat 10 Sep 2022 07:44:47 PM UTC:
  tests:  10|3
 total_score: 40/70
 55b591e
+Sat 10 Sep 2022 07:48:43 PM UTC: 
+ hashmap.c | 5 +++++
+ 1 file changed, 5 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:175:11: error: ‘vont’ undeclared (first use in this function); did you mean ‘cont’?
+  175 |       if (vont == map->capacity){
+      |           ^~~~
+      |           cont
+hashmap.c:175:11: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+d12cbdc
