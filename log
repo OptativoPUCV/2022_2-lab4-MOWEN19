@@ -710,3 +710,9 @@ Sat 10 Sep 2022 10:45:13 PM UTC:
  tests:  13|2
 total_score: 50/70
 0364f69
+Sat 10 Sep 2022 10:46:30 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  10|3
+total_score: 40/70
+8d249f4
