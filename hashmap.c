@@ -197,8 +197,6 @@ void enlarge(HashMap * map) {
 //d - Inicialice size a 0.
 
 //e - Inserte los elementos del arreglo *old_buckets* en el mapa (use la función insertMap que ya implementó).
-  Pair ** oldBuckets = map;
-  map->capacity *= 2;
   
   return;
 }
