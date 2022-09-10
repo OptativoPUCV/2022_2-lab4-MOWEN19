@@ -799,3 +799,9 @@ hashmap.c:152:18: error: format ‘%u’ expects argument of type ‘unsigned in
 cc1: all warnings being treated as errors
 Compilation failed
 6d61859
+Sat 10 Sep 2022 11:17:22 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  13|2
+total_score: 50/70
+ed0e6c9
