@@ -144,26 +144,20 @@ Pair * nextMap(HashMap * map) {
   size_t i = map->current;
   //map->current = i+1;
   //return map->buckets[map->current];
-  size_t cont = 0;
+  
   while(1){
     if (map->buckets[i]!=NULL){
       if (map->buckets[i]->key != NULL){
         map->current = i;
         return map->buckets[i];
       }
-      else{
-        map->current = i;
-        return map->buckets[i];
-      }
     } 
     i++;
-    cont++;
+    
     if (i == map->capacity){
       return NULL;
     }
-    if (cont == map->capacity){
-        return NULL;
-    }
+    
   }
 }
 
