@@ -650,3 +650,9 @@ hashmap.c:175:11: error: ‘vont’ undeclared (first use in this function); did
 hashmap.c:175:11: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 d12cbdc
+Sat 10 Sep 2022 07:48:54 PM UTC: 
+ hashmap.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  10|3
+total_score: 40/70
+1f68a97

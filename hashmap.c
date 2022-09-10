@@ -172,7 +172,8 @@ Pair * nextMap(HashMap * map) {
     cont++;
     if (i == map->capacity){
       i = 0;
-      if (vont == map->capacity){
+      if (
+        cont == map->capacity){
         return NULL;
       }
     }
