@@ -75,7 +75,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       map->buckets[i] = newPair;
       map->size += 1;
       map->current = i;
-      return;
+      break;
     }
     
     
