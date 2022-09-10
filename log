@@ -438,3 +438,17 @@ hashmap.c:200:11: error: unused variable ‘olcBuckets’ [-Werror=unused-variab
 cc1: all warnings being treated as errors
 Compilation failed
 13a3698
+Sat 10 Sep 2022 05:29:45 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:200:24: error: initialization of ‘Pair **’ from incompatible pointer type ‘HashMap *’ {aka ‘struct HashMap *’} [-Werror=incompatible-pointer-types]
+  200 |   Pair ** olcBuckets = map;
+      |                        ^~~
+hashmap.c:200:11: error: unused variable ‘olcBuckets’ [-Werror=unused-variable]
+  200 |   Pair ** olcBuckets = map;
+      |           ^~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+6cd4580
