@@ -151,6 +151,10 @@ Pair * nextMap(HashMap * map) {
         map->current = i;
         return map->buckets[i];
       }
+      else{
+        map->current = i;
+        return map->buckets[i];
+      }
     } 
     i++;
     cont++;
