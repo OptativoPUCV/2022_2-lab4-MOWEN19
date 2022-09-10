@@ -145,15 +145,12 @@ Pair * nextMap(HashMap * map) {
   while(1){
     i++;
     if (map->buckets[i] != NULL && map->buckets[i]->key != NULL){
-        printf("%zd \n",i);
         map->current = i;
         return map->buckets[i];
     } 
-    
     if (i == map->capacity){
       return NULL;
     }
-    
   }
 }
 
