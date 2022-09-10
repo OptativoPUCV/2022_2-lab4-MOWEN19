@@ -70,7 +70,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   Pair *newPair = createPair(key,value);
   size_t i = hash(key,map->capacity);//size_t == long long
   while(1){
-    if(map->buckets[i]==NULL || map->buckets[i]->key == NULL){   
+    if(map->buckets[i]==NULL ){   
       map->buckets[i] = newPair;
       map->size += 1;
       map->current = i;
