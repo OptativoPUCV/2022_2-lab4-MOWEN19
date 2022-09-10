@@ -156,9 +156,11 @@ Pair * firstMap(HashMap * map) {
   size_t i = 0;
   size_t cont=0;
   while(1){
-    if(map->buckets[i]->key != NULL){
+    if (map->buckets[i] != NULL){
+      if(map->buckets[i]->key != NULL){
       map->current = i; 
       return map->buckets[i];
+      }
     }
     i++;
     if (cont == 1){return NULL;}
@@ -166,7 +168,6 @@ Pair * firstMap(HashMap * map) {
       cont++;
       i = 0;
     }
-    
   }
 }
 
