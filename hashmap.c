@@ -146,16 +146,17 @@ Pair * nextMap(HashMap * map) {
   //return map->buckets[map->current];
   
   while(1){
+    printf("%zu",i);
     if (map->buckets[i]!=NULL){
       if (map->buckets[i]->key != NULL){
         map->current = i;
-        printf("%zu",i);
+        
         return map->buckets[i];
       }
     } 
     i++;
     
-    if (i == 4){
+    if (i == map->capacity){
       return NULL;
     }
     
