@@ -144,12 +144,10 @@ Pair * nextMap(HashMap * map) {
   size_t i = map->current;
   while(1){
     
-    if (map->buckets[i] != NULL){
-      if (map->buckets[i]->key != NULL){
+    if (map->buckets[i] != NULL || map->buckets[i]->key != NULL){
         printf("%zd \n",i);
-        map->current = 2;
-        return map->buckets[2];
-      }
+        map->current = i;
+        return map->buckets[i];
     } 
     i++;
     
