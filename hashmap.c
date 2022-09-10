@@ -77,16 +77,13 @@ void insertMap(HashMap * map, char * key, void * value) {
       map->current = i;
       break;
     }
-    
-    
-    
     i++;
     if (i == map->capacity){
       i = 0;
     }
 }
    
-return;
+
 }
 
 Pair * searchMap(HashMap * map,  char * key) {   
