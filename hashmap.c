@@ -142,16 +142,13 @@ Pair * firstMap(HashMap * map) {
 Pair * nextMap(HashMap * map) {
 //Pair * nextMap(HashMap * map) retorna el siguiente **Pair** del arreglo buckets a partir índice current. Recuerde actualizar el índice.
   size_t i = map->current;
-  //map->current = i+1;
-  //return map->buckets[map->current];
-  
   while(1){
     
     if (map->buckets[i] != NULL){
       if (map->buckets[i]->key != NULL){
         printf("%zd \n",i);
-        map->current = i;
-        return map->buckets[i];
+        map->current = 2;
+        return map->buckets[2];
       }
     } 
     i++;
