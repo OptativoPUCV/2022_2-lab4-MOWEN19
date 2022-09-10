@@ -784,3 +784,18 @@ hashmap.c:152:18: error: format ‘%d’ expects argument of type ‘int’, but
 cc1: all warnings being treated as errors
 Compilation failed
 b274633
+Sat 10 Sep 2022 11:16:52 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘nextMap’:
+hashmap.c:152:18: error: format ‘%u’ expects argument of type ‘unsigned int’, but argument 2 has type ‘size_t’ {aka ‘long unsigned int’} [-Werror=format=]
+  152 |         printf("%u",i);
+      |                 ~^  ~
+      |                  |  |
+      |                  |  size_t {aka long unsigned int}
+      |                  unsigned int
+      |                 %lu
+cc1: all warnings being treated as errors
+Compilation failed
+6d61859
