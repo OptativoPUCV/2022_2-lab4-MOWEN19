@@ -72,7 +72,7 @@ void insertMap(HashMap * map, char * key, void * value) {
   while(1){
     if(map->buckets[i]==NULL ){   
       map->buckets[i] = newPair;
-      map->size += 1;
+      map->size ++;
       map->current = i;
       return;
     }
