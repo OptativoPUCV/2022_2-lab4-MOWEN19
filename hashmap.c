@@ -186,6 +186,9 @@ Pair * nextMap(HashMap * map) {
       }
     } 
     i++;
+    if (i == map->capacity){
+      return NULL;
+    }
   }
   
     return NULL;
