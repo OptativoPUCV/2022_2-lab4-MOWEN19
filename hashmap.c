@@ -155,7 +155,7 @@ Pair * nextMap(HashMap * map) {
     } 
     i++;
     
-    if (i == map->capacity){
+    if (i == 4){
       return NULL;
     }
     
