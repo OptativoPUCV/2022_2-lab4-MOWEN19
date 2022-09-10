@@ -146,7 +146,7 @@ Pair * nextMap(HashMap * map) {
   //return map->buckets[map->current];
   
   while(1){
-    printf("%zu",i);
+    printf("%zu \n",i);
     if (map->buckets[i]!=NULL){
       if (map->buckets[i]->key != NULL){
         map->current = i;
