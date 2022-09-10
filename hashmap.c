@@ -180,7 +180,11 @@ Pair * nextMap(HashMap * map) {
     if (map->current > map->capacity){
       map->current = 0;
     }
-    if (map->buckets[i]!=NULL){return map->buckets[i];}
+    if (map->buckets[i]!=NULL){
+      if (map->buckets[i]->key != NULL){
+        return map->buckets[i];
+      }
+    } 
     i++;
   }
   
