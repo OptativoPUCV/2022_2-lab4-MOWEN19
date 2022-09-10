@@ -77,9 +77,7 @@ void insertMap(HashMap * map, char * key, void * value) {
       return;
     }
     i++;
-    if (i == map->capacity){
-      i = 0;
-    }
+    
   }
 }
 
