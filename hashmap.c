@@ -177,8 +177,7 @@ void enlarge(HashMap * map) {
   while(1){
     if(oldBuckets[i] != NULL){
       insertMap(map,oldBuckets[i]->key,oldBuckets[i]->value);
-      //
-      puts("ci");
+      //puts("ci");
     }
     //puts("ci");
     i++;
