@@ -906,3 +906,24 @@ hashmap.c:176:12: error: unused variable ‘indice’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 6cadd8c
+Sun 11 Sep 2022 06:05:26 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:173:3: error: expected ‘,’ or ‘;’ before ‘size_t’
+  173 |   size_t i = 0;
+      |   ^~~~~~
+hashmap.c:176:39: error: ‘i’ undeclared (first use in this function)
+  176 |     size_t indice = hash(map->buckets[i]->key,oldMapCapacity)
+      |                                       ^
+hashmap.c:176:39: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:177:5: error: expected ‘,’ or ‘;’ before ‘insertMap’
+  177 |     insertMap(newMap, map->buckets[indice]->key, map->buckets[indice]->value);
+      |     ^~~~~~~~~
+hashmap.c:176:12: error: unused variable ‘indice’ [-Werror=unused-variable]
+  176 |     size_t indice = hash(map->buckets[i]->key,oldMapCapacity)
+      |            ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+209a342
