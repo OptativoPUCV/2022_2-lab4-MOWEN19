@@ -176,7 +176,7 @@ void enlarge(HashMap * map) {
     size_t indice = hash(map->buckets[i]->key,oldMapCapacity);
     insertMap(newMap, map->buckets[indice]->key, map->buckets[indice]->value);
     i++;
-    puts("101011001")
+    puts("101011001");
     if (i == newMap->capacity){return;}
   }
 
