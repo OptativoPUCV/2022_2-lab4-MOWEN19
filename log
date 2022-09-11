@@ -989,3 +989,16 @@ Sun 11 Sep 2022 06:07:26 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 a72c77a
+Sun 11 Sep 2022 06:15:56 PM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:179:22: error: expected ‘;’ before ‘if’
+  179 |     puts("101011001")
+      |                      ^
+      |                      ;
+  180 |     if (i == newMap->capacity){return;}
+      |     ~~                
+Compilation failed
+0a486df
