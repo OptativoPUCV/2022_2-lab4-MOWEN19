@@ -1119,3 +1119,22 @@ Sun 11 Sep 2022 06:36:13 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 e092548
+Sun 11 Sep 2022 07:09:01 PM UTC: 
+ hashmap.c | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:178:13: error: assignment to ‘Pair **’ from incompatible pointer type ‘Pair *’ [-Werror=incompatible-pointer-types]
+  178 |     newPair = createPair(map->buckets[i]->key,map->buckets[i]->value);
+      |             ^
+hashmap.c:179:29: error: ‘*newPair’ is a pointer; did you mean to use ‘->’?
+  179 |     insertMap(newMap,newPair->key,newPair->value);
+      |                             ^~
+      |                             ->
+hashmap.c:179:42: error: ‘*newPair’ is a pointer; did you mean to use ‘->’?
+  179 |     insertMap(newMap,newPair->key,newPair->value);
+      |                                          ^~
+      |                                          ->
+cc1: all warnings being treated as errors
+Compilation failed
+cdc5d43
