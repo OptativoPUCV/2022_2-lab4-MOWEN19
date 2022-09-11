@@ -1291,3 +1291,23 @@ hashmap.c:173:10: error: unused variable ‘i’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 30fd82f
+Sun 11 Sep 2022 07:32:22 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:176:62: error: expected ‘;’ before ‘while’
+  176 |   map->buckets = (Pair**)calloc(map->capacity*2,sizeof(Pair))
+      |                                                              ^
+      |                                                              ;
+  177 |   while(1){
+      |   ~~~~~                                                       
+hashmap.c:174:10: error: unused variable ‘oldBuckets’ [-Werror=unused-variable]
+  174 |   Pair** oldBuckets = map->buckets;
+      |          ^~~~~~~~~~
+hashmap.c:173:10: error: unused variable ‘i’ [-Werror=unused-variable]
+  173 |   size_t i = 0;
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+7e2734d
