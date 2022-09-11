@@ -182,7 +182,7 @@ void enlarge(HashMap * map) {
     }
     //puts("ci");
     i++;
-    if (i >= (map->capacity)){return;}
+    if (i >= (map->capacity)/2){return;}
     
   }
 
