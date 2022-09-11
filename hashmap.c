@@ -171,11 +171,12 @@ void enlarge(HashMap * map) {
 //e - Inserte los elementos del arreglo *old_buckets* en el mapa (use la función insertMap que ya implementó).
   HashMap * newMap = createMap(map->capacity*2)  ;
   size_t i = 0;
+  size_t indice = hash(map->buckets[0]->key,newMap->capacity);
   while(1){
-    size_t indice = hash(map->buckets[i]->key,newMap->capacity);
-    insertMap(newMap, map->buckets[i]->key, map->buckets[i]->value);
-    i++;
-    puts("101011001");
+    insertMap(newMap, map->buckets[indice]->key, map->buckets[indice]->value);
+    indice++;
+    //puts("101011001");
+    if (indice == newMap->capacity){indice = 0;}
     if (i == newMap->capacity){return;}
   }
 

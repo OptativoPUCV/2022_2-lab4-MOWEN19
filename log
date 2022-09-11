@@ -1104,3 +1104,8 @@ hashmap.c:175:12: error: unused variable ‘indice’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 667a5b1
+Sun 11 Sep 2022 06:31:07 PM UTC: 
+ hashmap.c | 9 +++++----
+ 1 file changed, 5 insertions(+), 4 deletions(-)
+ tests:  0|0
+33fe1ee
