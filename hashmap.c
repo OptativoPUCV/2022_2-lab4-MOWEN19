@@ -176,7 +176,7 @@ void enlarge(HashMap * map) {
   while(1){
     //j = hash(map->buckets[i]->key,newMap->capacity);
     //Pair ** newPair = createPair(map->buckets[i]->key,map->buckets[i]->value);
-    insertMap(newMap,map->buckets[i]->key,newPair->buckets[i]->value);
+    insertMap(newMap,map->buckets[i]->key,map->buckets[i]->value);
     i++;
     if (i == newMap->capacity){return;}
   }
