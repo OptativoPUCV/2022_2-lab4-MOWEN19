@@ -174,7 +174,7 @@ void enlarge(HashMap * map) {
   Pair **oldBuckets = map->buckets;
   while(1){
     if(oldBuckets[i]!=NULL){
-      insertMap(newMap,map->buckets[i]->key,map->buckets[i]->value);
+      insertMap(map,oldBuckets->buckets[i]->key,olcBuckets->buckets[i]->value);
     }
     i++;
     if (i == (map->capacity)/2){return;}

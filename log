@@ -1211,3 +1211,23 @@ Sun 11 Sep 2022 07:23:42 PM UTC:
  tests:  16|1
 total_score: 60/70
 9a26599
+Sun 11 Sep 2022 07:23:58 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:177:31: error: ‘*oldBuckets’ is a pointer; did you mean to use ‘->’?
+  177 |       insertMap(map,oldBuckets->buckets[i]->key,olcBuckets->buckets[i]->value);
+      |                               ^~
+      |                               ->
+hashmap.c:177:49: error: ‘olcBuckets’ undeclared (first use in this function); did you mean ‘oldBuckets’?
+  177 |       insertMap(map,oldBuckets->buckets[i]->key,olcBuckets->buckets[i]->value);
+      |                                                 ^~~~~~~~~~
+      |                                                 oldBuckets
+hashmap.c:177:49: note: each undeclared identifier is reported only once for each function it appears in
+hashmap.c:172:13: error: unused variable ‘newMap’ [-Werror=unused-variable]
+  172 |   HashMap * newMap = createMap(map->capacity*2);
+      |             ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b86ad46
