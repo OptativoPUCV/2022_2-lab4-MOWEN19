@@ -172,10 +172,10 @@ void enlarge(HashMap * map) {
   HashMap * newMap = createMap(map->capacity*2)  ;
   size_t i = 0;
   //size_t j;
-  Pair **newPair;
+  //Pair **newPair;
   while(1){
     //j = hash(map->buckets[i]->key,newMap->capacity);
-    newPair = createPair(map->buckets[i]->key,map->buckets[i]->value);
+    Pair ** newPair = createPair(map->buckets[i]->key,map->buckets[i]->value);
     insertMap(newMap,newPair->key,newPair->value);
     i++;
     if (i == newMap->capacity){return;}
