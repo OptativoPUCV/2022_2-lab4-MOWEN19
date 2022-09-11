@@ -171,7 +171,7 @@ void enlarge(HashMap * map) {
 //e - Inserte los elementos del arreglo *old_buckets* en el mapa (use la función insertMap que ya implementó).
   HashMap * newMap = createMap(map->capacity*2)  ;
   size_t i = 0;
-  printf("%zu",map->capacity)
+  printf("%zu",map->capacity);
   while(1){
     //size_t indice = hash(map->buckets[i]->key,map->capacity);
     //insertMap(newMap, map->buckets[i]->key, map->buckets[i]->value);
