@@ -170,7 +170,19 @@ void enlarge(HashMap * map) {
 
 //e - Inserte los elementos del arreglo *old_buckets* en el mapa (use la función insertMap que ya implementó).
   //HashMap * newMap = createMap(map->capacity*2);
-  
+  size_t i = 0;
+  Pair** oldBuckets = map->buckets;
+  //map->capacity*=2;
+  map->buckets = (Pair**)calloc(map->capacity*2,sizeof(Pair))
+  while(1){
+    if(oldBuckets[i] != NULL){
+      insertMap(map,oldBuckets[i]->key,oldBuckets[i]->value);
+    }
+    puts("ci");
+    i++;
+    if (i >= (map->capacity)){return;}
+    
+  }
 
   return;
 }

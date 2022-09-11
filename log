@@ -1271,3 +1271,23 @@ Sun 11 Sep 2022 07:29:28 PM UTC:
  tests:  16|1
 total_score: 60/70
 1be20b4
+Sun 11 Sep 2022 07:32:10 PM UTC: 
+ hashmap.c | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:176:62: error: expected ‘;’ before ‘while’
+  176 |   map->buckets = (Pair**)calloc(map->capacity*2,sizeof(Pair))
+      |                                                              ^
+      |                                                              ;
+  177 |   while(1){
+      |   ~~~~~                                                       
+hashmap.c:174:10: error: unused variable ‘oldBuckets’ [-Werror=unused-variable]
+  174 |   Pair** oldBuckets = map->buckets;
+      |          ^~~~~~~~~~
+hashmap.c:173:10: error: unused variable ‘i’ [-Werror=unused-variable]
+  173 |   size_t i = 0;
+      |          ^
+cc1: all warnings being treated as errors
+Compilation failed
+30fd82f
