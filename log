@@ -1247,3 +1247,15 @@ hashmap.c:177:49: error: ‘olcBuckets’ undeclared (first use in this function
 hashmap.c:177:49: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 f08c622
+Sun 11 Sep 2022 07:25:09 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:177:40: error: ‘olcBuckets’ undeclared (first use in this function); did you mean ‘oldBuckets’?
+  177 |       insertMap(map,oldBuckets[i]->key,olcBuckets[i]->value);
+      |                                        ^~~~~~~~~~
+      |                                        oldBuckets
+hashmap.c:177:40: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+a2d1580
