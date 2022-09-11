@@ -1199,3 +1199,9 @@ hashmap.c:174:10: error: unused variable ‘oldBuckets’ [-Werror=unused-variab
 cc1: all warnings being treated as errors
 Compilation failed
 bc3556c
+Sun 11 Sep 2022 07:23:31 PM UTC: 
+ hashmap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  16|1
+total_score: 60/70
+641086b
