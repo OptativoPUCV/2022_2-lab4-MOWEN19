@@ -973,3 +973,14 @@ Sun 11 Sep 2022 06:06:20 PM UTC:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 3f49264
+Sun 11 Sep 2022 06:06:35 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:176:12: error: unused variable ‘indice’ [-Werror=unused-variable]
+  176 |     size_t indice = hash(map->buckets[i]->key,oldMapCapacity);
+      |            ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+f853e13
