@@ -179,7 +179,7 @@ void enlarge(HashMap * map) {
     if(oldBuckets[i] != NULL){
       insertMap(map,oldBuckets[i]->key,oldBuckets[i]->value);
     }
-    puts("ci");
+    //puts("ci");
     i++;
     if (i >= (map->capacity)){return;}
     
