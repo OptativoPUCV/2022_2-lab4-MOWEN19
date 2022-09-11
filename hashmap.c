@@ -172,8 +172,8 @@ void enlarge(HashMap * map) {
   HashMap * newMap = createMap(map->capacity*2)  ;
   size_t i = 0;
   while(1){
-    //size_t indice = hash(map->buckets[i]->key,map->capacity);
-    //insertMap(newMap, map->buckets[i]->key, map->buckets[i]->value);
+    size_t indice = hash(map->buckets[i]->key,newMap->capacity);
+    insertMap(newMap, map->buckets[i]->key, map->buckets[i]->value);
     i++;
     puts("101011001");
     if (i == newMap->capacity){return;}
