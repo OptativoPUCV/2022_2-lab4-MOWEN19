@@ -1157,3 +1157,14 @@ hashmap.c:179:42: error: ‘*newPair’ is a pointer; did you mean to use ‘->�
 cc1: all warnings being treated as errors
 Compilation failed
 4b0d0af
+Sun 11 Sep 2022 07:10:52 PM UTC: 
+ hashmap.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:179:43: error: ‘newPair’ undeclared (first use in this function)
+  179 |     insertMap(newMap,map->buckets[i]->key,newPair->buckets[i]->value);
+      |                                           ^~~~~~~
+hashmap.c:179:43: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+85b4496
