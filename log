@@ -1039,3 +1039,23 @@ Sun 11 Sep 2022 06:21:08 PM UTC:
  tests:  16|1
 total_score: 60/70
 57182c1
+Sun 11 Sep 2022 06:21:40 PM UTC: 
+ hashmap.c | 1 +
+ 1 file changed, 1 insertion(+)
+In file included from test.c:4:
+hashmap.c: In function ‘enlarge’:
+hashmap.c:174:30: error: expected ‘;’ before ‘while’
+  174 |   printf("%zu",map->capacity)
+      |                              ^
+      |                              ;
+  175 |   while(1){
+      |   ~~~~~                       
+hashmap.c:173:10: error: unused variable ‘i’ [-Werror=unused-variable]
+  173 |   size_t i = 0;
+      |          ^
+hashmap.c:172:13: error: unused variable ‘newMap’ [-Werror=unused-variable]
+  172 |   HashMap * newMap = createMap(map->capacity*2)  ;
+      |             ^~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9c6dbe3
